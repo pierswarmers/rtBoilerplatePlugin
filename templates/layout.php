@@ -20,7 +20,13 @@ $routes = $sf_context->getRouting()->getRoutes();
     <?php use_javascript('/rtCorePlugin/vendor/jquery/js/jquery.min.js'); ?>
     <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>
     <?php use_javascript('/rtUserPlugin/js/script.js'); ?>
-    
+
+    <?php include_javascripts() ?>
+
+    <!--[if lt IE 7 ]>
+      <script src="/rtUserPlugin/js/dd_belatedpng.js"></script>
+    <![endif]-->
+
     <?php if (isset($routes['rt_blog_page_feed'])): ?>
     <?php echo auto_discovery_link_tag('rss', '@rt_blog_page_feed?format=rss') ?>
     <?php echo auto_discovery_link_tag('atom', '@rt_blog_page_feed?format=atom') ?>
@@ -83,12 +89,6 @@ $routes = $sf_context->getRouting()->getRoutes();
       </div>
 
     </div>
-
-    <?php include_javascripts() ?>
-
-    <!--[if lt IE 7 ]>
-      <script src="/rtUserPlugin/js/dd_belatedpng.js"></script>
-    <![endif]-->
 
     <!--rt-admin-holder-->
   </body>
