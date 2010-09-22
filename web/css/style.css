@@ -1,17 +1,28 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}
+/*
+
+  style.css
+
+  Contains all styles required for the them, including some common reset, font 
+  normalization and some base styles.
+
+  Heavily based on HTML5 Boilerplate: http://html5boilerplate.com/
+
+  If you're wanting add your custom changes, you might like to skip down to the
+  "Custom Styles" section towards the end of the file. If you wish, you can also
+  ditch the lot and start from scratch.
+
+*/
+
+/*
+
+  Section: Reset
+  Notes:   Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  Version: v1.4 2009-07-27
+  Authors: Eric Meyer & Richard Clark
+  See:     html5doctor.com/html-5-reset-stylesheet/
+
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline;  background:transparent; }
 article, aside, figure, footer, header, hgroup, nav, section { display:block; }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
@@ -24,6 +35,12 @@ abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
 table { border-collapse:collapse; border-spacing:0; }
 hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
 input, select { vertical-align:middle; }
+/*
+
+  Section: Basic Tag Styles
+  Notes:   Set some very basic adjustments on tag styles
+
+*/
 body { font:13px sans-serif; *font-size:small; *font:x-small; line-height:1.22; }
 table { font-size:inherit; font:100%; }
 select, input, textarea { font:99% sans-serif; }
@@ -61,33 +78,23 @@ button {  width: auto; overflow: visible; }
 * html .clearfix { height: 1%; }
 .clearfix, .rt-container { display: block; }
 /*
- * CSS3, Please!
- * http://css3please.com/
- */
-.box_round, pre, #rt-header, #rt-footer, button, input[type=text], input[type=password], textarea, img.left, img.right, .rt-shop-product-promotion,
-p.error, p.success, p.notice {
-     -moz-border-radius: 5px; /* FF1+ */
-  -webkit-border-radius: 5px; /* Saf3-4 */
-          border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
-}
-.box_shadow, #rt-header, #rt-footer, button {
-     -moz-box-shadow: 0px 0px 6px #CCC; /* FF3.5+ */
-  -webkit-box-shadow: 0px 0px 6px #CCC; /* Saf3.0+, Chrome */
-          box-shadow: 0px 0px 6px #CCC; /* Opera 10.5, IE 9.0 */
-}
-.box_gradient {
-  background-color: #EFEFEF;
-  background-image: -moz-linear-gradient(top, #EFEFEF, #CCCCCC); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #EFEFEF),color-stop(1, #CCCCCC)); /* Saf4+, Chrome */
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC')"; /* IE8 */
-}
+
+  Section: CSS3, Please!
+  Notes:   Provide some helpful CSS3 classes for shodows, rounded borders etc...
+  See:     http://css3please.com/
+
+*/
+.box_round, pre, #rt-header, #rt-footer, button, input[type=text], input[type=password], textarea, img.left, img.right, .rt-shop-product-promotion, p.error, p.success, p.notice { -moz-border-radius: 5px; /* FF1+ */ -webkit-border-radius: 5px; /* Saf3-4 */ border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */ }
+.box_shadow, #rt-header, #rt-footer, button { -moz-box-shadow: 0px 0px 6px #CCC; /* FF3.5+ */ -webkit-box-shadow: 0px 0px 6px #CCC; /* Saf3.0+, Chrome */ box-shadow: 0px 0px 6px #CCC; /* Opera 10.5, IE 9.0 */ }
+.box_gradient { background-color: #EFEFEF; background-image: -moz-linear-gradient(top, #EFEFEF, #CCCCCC); /* FF3.6 */ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #EFEFEF),color-stop(1, #CCCCCC)); /* Saf4+, Chrome */ filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC'); /* IE6,IE7 */ -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC')"; /* IE8 */ }
 .box_textshadow { text-shadow: 1px 1px 3px #888; /* FF3.5+, Opera 9+, Saf1+, Chrome */ }
+/*
 
- /* Primary Styles
-    Author: digital Wranglers
- */
+  Section: Custom Styles
+  Author:  Piers Warmers <piers@wranglers.com.au>
+  Notes:   Good initial styles for common elements. Feel free to customise.
 
+*/
 body { min-width: 960px; font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif; text-align: center; }
 a:focus { outline: 1px dotted }
 hr { border: 0 #ccc solid; border-top-width: 1px; clear: both; height: 0 }
@@ -126,20 +133,14 @@ p,pre,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset { margin-bottom: 
 #rt-footer a { text-decoration: none; color: #999; }
 #rt-footer ul { margin-left: 0; padding: 0; list-style: none }
 #rt-footer li { display: inline; margin: 0 0 0 20px; padding: 0; }
-
 .rt-admin-edit-tools-trigger { display: none }
-
 img.left { float:left; margin: 0 20px 10px 0; }
-
 img.right { float:right; margin: 0 0 10px 20px;  }
-
 .rt-search ul, .rt-search li { list-style: none; margin-left:0; }
-
 #rt-body input.rt-text-small { width:50px; }
-
 /*
 
-Pager
+  Section: Pagination
 
 */
 .rt-pager {text-align:center;}
@@ -153,14 +154,7 @@ Pager
 .rt-pager .here a {color:#CCC;text-decoration:none;cursor:default;}
 /*
 
-Errors
-
-*/
-.error { margin:0;padding:0;background:none;border:0; }
-ul.error_list, .error_list li { margin:0;padding:0;display:inline;list-style: none;font-weight:normal; }
-/*
-
-Forms
+  Section: Forms
 
 */
 .rt-container label { display: block;  float: left; text-align: left;  }
@@ -168,9 +162,11 @@ Forms
 .rt-container td .help { padding-left: 0; }
 /*
 
-Simple feedback
+  Section: Simple Feedback
 
 */
+.error { margin:0;padding:0;background:none;border:0; }
+ul.error_list, .error_list li { margin:0;padding:0;display:inline;list-style: none;font-weight:normal; }
 span.error, span.success, span.loading { font-weight:bold; background-color:transparent; background-position: 0 50%; background-repeat: no-repeat; border:none; padding:0 0 0 20px; }
 span.loading { background-image: url(../img/loader.gif); }
 span.error { background-image: url(../img/cross.png); color: red; }
@@ -181,7 +177,7 @@ p.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
 p.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
 /*
 
-Tag Cloud
+  Section: Tag Cloud
 
 */
 .tag-cloud {margin:0;padding:0;}
@@ -192,7 +188,7 @@ Tag Cloud
 .tag-cloud small small {font-size:8px;}
 /*
 
-Product Mini
+  Section: Product Mini
 
 */
 .rt-shop-product-mini { width: 190px;float:left;margin-right:10px;position:relative;margin-bottom:10px;}
@@ -204,10 +200,9 @@ Product Mini
 .rt-shop-product-mini .rt-shop-product-price {  font-size:1em; margin-bottom:0; }
 .rt-shop-product-mini a { text-decoration:none; font-weight: bold; }
 span.rt-shop-product-promotion{position:absolute;top:0;right:0;background:orange;color:#fff;padding:5px;}
-
 /*
 
-Product display
+  Section: Product display
 
 */
 .rt-shop-product-gallery {float:left;position:relative;width:200px;}
@@ -220,7 +215,7 @@ Product display
 .rt-shop-selection-group strong, .rt-shop-item-quantity label {display:block;position:relative; top:0.4em;float:left;width:100px; padding:0 0 5px 0;margin:0; }
 /*
 
-UI overide
+  Section: UI overide
 
 */
 .ui-buttonset {float:left;margin:0;width:370px;}
@@ -239,7 +234,7 @@ UI overide
 .ui-helper-hidden-accessible {position:absolute!important;} /*don't remove this important! blueprint overrides otherwise this UI style */
 /*
 
-Breadcrumb
+  Section: Breadcrumb
 
 */
 .rt-shop-order-breadcrumb {list-style-type:none;background:#E9E9E9;margin-left:0;}
@@ -250,14 +245,16 @@ Breadcrumb
 .rt-shop-order-breadcrumb li.past {background-color:#6C6C6C;background-image: url(../img/arrow-past.png);}
 /*
 
-Shopping Process
+  Section: Shopping Process
 
 */
 .rt-tools button { float:right; }
 .rt-shop-cart-total { background: #EFEFEF; font-weight:bold; }
 /*
- * print styles
- */
+
+  Section: Print Styles
+
+*/
 @media print {
   * { background: transparent !important; color: #333 !important; text-shadow: none; }
   a, a:visited { color: #333 !important; text-decoration: underline; }
@@ -270,20 +267,28 @@ Shopping Process
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
+/*
 
+  Section: Mobile Devices, Portrait Mode
 
-
+*/
 @media all and (orientation:portrait) {
 
 }
+/*
 
+  Section: Mobile Devices, Landscape Mode
+
+*/
 @media all and (orientation:landscape) {
 
 }
+/*
 
-/* Grade-A Mobile Browsers */
+  Section: Grade-A Mobile Browsers
+
+*/
 @media screen and (max-device-width: 480px) {
   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
-
 }
 
