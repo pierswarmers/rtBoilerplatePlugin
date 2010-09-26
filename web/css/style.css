@@ -84,7 +84,7 @@ button {  width: auto; overflow: visible; }
   See:     http://css3please.com/
 
 */
-.box_round, pre, #rt-header, #rt-footer, button, input[type=text], input[type=password], textarea, img.left, img.right, .rt-shop-product-promotion, p.error, p.success, p.notice { -moz-border-radius: 5px; /* FF1+ */ -webkit-border-radius: 5px; /* Saf3-4 */ border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */ }
+.box_round, pre, #rt-header, #rt-footer, button, input[type=text], input[type=password], textarea, .rt-gallery img, img.left, img.right, .rt-shop-product-promotion, p.error, p.success, p.notice { -moz-border-radius: 5px; /* FF1+ */ -webkit-border-radius: 5px; /* Saf3-4 */ border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */ }
 .box_shadow, #rt-header, #rt-footer, button { -moz-box-shadow: 0px 0px 6px #CCC; /* FF3.5+ */ -webkit-box-shadow: 0px 0px 6px #CCC; /* Saf3.0+, Chrome */ box-shadow: 0px 0px 6px #CCC; /* Opera 10.5, IE 9.0 */ }
 .box_gradient { background-color: #EFEFEF; background-image: -moz-linear-gradient(top, #EFEFEF, #CCCCCC); /* FF3.6 */ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #EFEFEF),color-stop(1, #CCCCCC)); /* Saf4+, Chrome */ filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC'); /* IE6,IE7 */ -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#EFEFEF', EndColorStr='#CCCCCC')"; /* IE8 */ }
 .box_textshadow { text-shadow: 1px 1px 3px #888; /* FF3.5+, Opera 9+, Saf1+, Chrome */ }
@@ -180,7 +180,7 @@ p.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
   Section: Tag Cloud
 
 */
-.tag-cloud {margin:0;padding:0;}
+.tag-cloud {margin-left:0;padding:0;}
 .tag-cloud li {display:inline;list-style-type:none;margin:0;padding:0;}
 .tag-cloud big {font-size:14px;}
 .tag-cloud big big {font-size:16px;}
