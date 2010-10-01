@@ -170,7 +170,7 @@ fieldset {border-bottom:1px solid #ccc; padding-bottom:0px;}
 .rt-form-row textarea { width:95%; }
 .rt-form-row label { width:150px; float:left; position:relative; top:3px;  }
 .rt-form-row div.rt-form-field { margin-left:150px; }
-.rt-button-set {  }
+.rt-form-buttons {  }
 /*
 
   Section: Simple Feedback
