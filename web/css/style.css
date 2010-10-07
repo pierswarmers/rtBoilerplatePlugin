@@ -270,6 +270,8 @@ span.rt-shop-product-promotion{position:absolute;top:0;right:0;background:orange
 */
 .rt-tools button { float:right; }
 .rt-shop-cart-total { background: #EFEFEF; font-weight:bold; }
+td.rt-shop-cart-quantity input[type=text] { width:50px !important; }
+.rt-shop-order-membership-panel { width:315px; float:left; }
 /*
 
   Section: Print Styles
