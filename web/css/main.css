@@ -3,9 +3,25 @@
   This file can be completely customized by you...
 
 */
-
-p,pre,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset { margin-bottom: 20px }
-legend { font-size: 15px; }
+p,pre,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset { margin-bottom: 20px; }
+h1,h2,h3,h4,h5,h6,legend { font-weight:bold; }
+h1 { font-size:20px; border-bottom:2px solid #CCC; }
+h1 span { float:right; color:#CCC; }
+h2, legend { font-size:18px; }
+h3 { font-size:16px; }
+h4 { font-size:15px; }
+h5 { font-size:14px; }
+h6 { font-size:13px; }
+h1 { font-size:20px; }
+legend { display:block; padding-bottom:20px;}
+table { width:100%; }
+label { font-weight:bold; }
+input, textarea { background:url(../img/input.png) 0 0 repeat-y #FFF; border:1px solid #CCC; padding:4px; display:inline-block; outline:none;}
+button { border:0; background:#999; padding:6px; display:inline-block; font-weight:bold; color:#FFF; }
+button:hover { background:#555; }
+table, th, td { border:1px solid #CCC; }
+th, td { padding:10px; border-collapse:collapse; }
+th { background:#efefef }
 
 #rt-container { width: 960px; margin: 0 auto; text-align: left; background: url(../img/border.png) 668px 0 repeat-y; }
 
@@ -26,10 +42,14 @@ legend { font-size: 15px; }
 #rt-footer ul { margin-left: 0; padding: 0; list-style: none }
 #rt-footer li { display: inline; margin: 0 0 0 20px; padding: 0; }
 
+.rt-form-tools { margin-top:-20px; background:#efefef; padding:10px 0 10px 150px; }
 
 img.left { float:left; margin: 0 20px 10px 0; }
 img.right { float:right; margin: 0 0 10px 20px;  }
+
 .rt-search ul, .rt-search li { list-style: none; margin-left:0; }
-#rt-body input.rt-text-small { width:50px; }
+
+::-moz-selection{ background:yellow; color:#555; }
+::selection { background:yellow; color:#555; }
 
 

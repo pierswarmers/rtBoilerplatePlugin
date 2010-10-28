@@ -19,13 +19,16 @@
   Section: Forms
 
 */
-.rt-form-schema { list-style:none; margin:0; padding:0 }
+.rt-form-schema { list-style:none; margin:0; padding:0; }
 .rt-form-schema .rt-highlight { background:#EFEFEF; }
-.rt-form-row  { border-top:1px solid #ccc; padding:5px 0; margin:0; }
+.rt-form-row  { border-top:1px solid #ccc; padding:0; margin:0; }
+.rt-form-schema .rt-form-row:last-child  { border-bottom:1px solid #ccc; }
+.rt-form-row div.rt-form-field {  padding:10px; }
 .rt-form-row .rt-help { padding-left:10px; }
 .rt-form-row .rt-help:before { content:"\2192  "; }
 .rt-form-row textarea { width:95%; }
-.rt-form-row label { width:150px; float:left; position:relative; top:3px; }
+.rt-form-row input[type=text] { width:250px; }
+.rt-form-row label { width:150px; float:left; position:relative; padding:14px 0; }
 .rt-form-row .rt-form-field { margin-left:150px; }
 /*
 
@@ -48,17 +51,18 @@
   Section: Simple Feedback
 
 */
-.error { margin:0;padding:0;background:none;border:0; }
-ul.rt-error-list, .rt-error-list li { margin:0;padding:0;display:block;list-style: none;font-weight:normal; color:#8a1f11; }
-span.error, span.success, span.loading { font-weight:bold; background-color:transparent; background-position: 0 50%; background-repeat: no-repeat; border:none; padding:0 0 0 20px; }
-span.loading { background-image: url(../img/loader.gif); }
-span.error { background-image: url(../img/cross.png); color: red; }
-span.success { background-image: url(../img/tick.png); color: green; }
-p.error, p.notice, p.success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
-p.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
-p.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
-p.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
-
+ul.rt-error-list, .rt-error-list li {  margin:0;padding:0;display:block;list-style: none;font-weight:normal; color:#8a1f11; }
+.rt-error-list li { width:250px; padding:5px 0; }
+.error, .success, .loading, .notice { font-weight:bold; background-color:transparent; background-position:0 50%; background-repeat:no-repeat; border:none; padding:0 0 0 20px; }
+.error { background-image:url(../img/error.png); color:#8a1f11; }
+.success { background-image:url(../img/success.png); color:#264409; }
+.notice { background-image:url(../img/notice.png); color:#AF8520; }
+.loading { background-image:url(../img/loading.gif); color:#333; }
+p.error, p.notice, p.success, p.loading { padding:10px 10px 10px 30px; margin-bottom:1em; border:2px solid #ddd; background-position:10px 50%; }
+p.error { background-color:#FBE3E4; border-color:#FBC2C4; }
+p.success { background-color:#E6EFC2; border-color:#C6D880; }
+p.notice { background-color:#FFF6BF; border-color:#FFD324; }
+p.loading { background-color:#EFEFEF; border-color:#CCC; }
 /*
 
   Section: Tag Cloud
