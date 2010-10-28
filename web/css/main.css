@@ -1,0 +1,35 @@
+/*
+
+  This file can be completely customized by you...
+
+*/
+
+p,pre,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset { margin-bottom: 20px }
+legend { font-size: 15px; }
+
+#rt-container { width: 960px; margin: 0 auto; text-align: left; background: url(../img/border.png) 668px 0 repeat-y; }
+
+#rt-header { text-align: center; text-shadow: 2px 2px 0 #FFF; font-size: 30px; background:#FFF; font-weight: bold; color: #999; line-height: 80px; margin-bottom: 40px; border-bottom: 2px solid #CCC;}
+#rt-header a { color: #999; text-decoration: none; }
+
+#rt-nav { width: 290px; float: right; padding-bottom:20px; }
+#rt-nav ul { list-style:none; }
+#rt-nav p, #rt-nav ul, #rt-nav dl, #rt-nav h2 { margin: 0 0 20px 22px }
+
+.rt-site-page-navigation .here { font-weight: bold; }
+.rt-site-page-navigation .here li { font-weight: normal; }
+
+#rt-body { width:640px; }
+
+#rt-footer { text-align: center; clear:both; padding:20px; margin:40px 0; background: #FFF; border-top: 2px solid #CCC; }
+#rt-footer a { text-decoration: none; color: #999; }
+#rt-footer ul { margin-left: 0; padding: 0; list-style: none }
+#rt-footer li { display: inline; margin: 0 0 0 20px; padding: 0; }
+
+
+img.left { float:left; margin: 0 20px 10px 0; }
+img.right { float:right; margin: 0 0 10px 20px;  }
+.rt-search ul, .rt-search li { list-style: none; margin-left:0; }
+#rt-body input.rt-text-small { width:50px; }
+
+

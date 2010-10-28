@@ -1,7 +1,30 @@
-/* Author: 
-
-*/
 $(function(){
+  /*
+    Section: Your code goes here...
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*
     Section: Spice up the form rows to be highlighted.
   */
