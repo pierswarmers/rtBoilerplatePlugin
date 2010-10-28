@@ -28,7 +28,7 @@ $(function(){
   /*
     Section: Spice up the form rows to be highlighted.
   */
-  $('.rt-form-row textarea,.rt-form-row input').focus(function(){
+  $('.rt-form-row textarea,.rt-form-row input,.rt-form-row select').focus(function(){
     $(this).parents('li').addClass('rt-highlight');
   }).blur(function(){
     $(this).parents('li').removeClass('rt-highlight');

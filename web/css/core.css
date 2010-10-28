@@ -4,6 +4,14 @@
 .rt-admin-edit-tools-trigger { display: none }
 #rt-body { position:relative; }
 /*
+  Section: Misc.
+*/
+::-moz-selection{ background:yellow; color:#555; }
+::selection { background:yellow; color:#555; }
+img.left { float:left; margin: 0 20px 10px 0; }
+img.right { float:right; margin: 0 0 10px 20px;  }
+.rt-search ul, .rt-search li { list-style: none; margin-left:0; }
+/*
 
   Section: Pagination
 
@@ -19,17 +27,19 @@
   Section: Forms
 
 */
-.rt-form-schema { list-style:none; margin:0; padding:0; }
+.rt-form-schema { list-style:none; margin:0 0 20px; padding:0;border:1px solid #ccc; }
 .rt-form-schema .rt-highlight { background:#EFEFEF; }
-.rt-form-row  { border-top:1px solid #ccc; padding:0; margin:0; }
-.rt-form-schema .rt-form-row:last-child  { border-bottom:1px solid #ccc; }
-.rt-form-row div.rt-form-field {  padding:10px; }
+.rt-form-row  {  padding:0; margin:0; }
+.rt-form-schema .rt-form-row:last-child  {  }
+.rt-form-row div.rt-form-field {  padding:10px 0; }
 .rt-form-row .rt-help { padding-left:10px; }
-.rt-form-row .rt-help:before { content:"\2192  "; }
+/* .rt-form-row .rt-help:before { content:"\2192  "; } */
 .rt-form-row textarea { width:95%; }
-.rt-form-row input[type=text] { width:250px; }
-.rt-form-row label { width:150px; float:left; position:relative; padding:14px 0; }
+.rt-form-row input[type=text], .rt-form-row input[type=password] { width:250px; }
+.rt-form-row label { width:140px; float:left; position:relative; padding:14px 0 0 10px; }
 .rt-form-row .rt-form-field { margin-left:150px; }
+.rt-form-tools { margin-top:-20px; background:#efefef; padding:10px 0 10px 150px; }
+.rt-form-tools button { margin-right:10px; }
 /*
 
   Section: ReCAPTCHA
@@ -52,7 +62,7 @@
 
 */
 ul.rt-error-list, .rt-error-list li {  margin:0;padding:0;display:block;list-style: none;font-weight:normal; color:#8a1f11; }
-.rt-error-list li { width:250px; padding:5px 0; }
+.rt-error-list li { padding:5px 0; }
 .error, .success, .loading, .notice { font-weight:bold; background-color:transparent; background-position:0 50%; background-repeat:no-repeat; border:none; padding:0 0 0 20px; }
 .error { background-image:url(../img/error.png); color:#8a1f11; }
 .success { background-image:url(../img/success.png); color:#264409; }

@@ -79,7 +79,12 @@ $area_class .= ' ' . $area_class . '-' . str_replace('_', '-', sfInflector::tabl
 
     <div id="rt-footer">
       <ul>
-        <li><?php echo $sf_user->isAuthenticated() ? link_to(__('sign out'), '@sf_guard_signout') : link_to(__('sign in'), '@sf_guard_signin') ?></li>
+        <?php if($sf_user->isAuthenticated()): ?>
+        <li><?php echo link_to(__('account details'), 'rt_guard_account') ?></li>
+        <li><?php echo link_to(__('sign out'), 'sf_guard_signout') ?></li>
+        <?php else: ?>
+        <li><?php echo link_to(__('sign in'), 'sf_guard_signin') ?></li>
+        <?php endif; ?>
         <li><?php echo link_to(__('sitemap'), 'rt_sitemap') ?></li>
       </ul>
     </div> <!--! end of #rt-footer -->
