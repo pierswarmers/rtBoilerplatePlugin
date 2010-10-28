@@ -35,7 +35,8 @@ img.right { float:right; margin: 0 0 10px 20px;  }
 .rt-form-row .rt-help { padding-left:10px; }
 /* .rt-form-row .rt-help:before { content:"\2192  "; } */
 .rt-form-row textarea { width:95%; }
-.rt-form-row input[type=text], .rt-form-row input[type=password] { width:250px; }
+.rt-form-row input[type=text], .rt-form-row input[type=password] { width:200px; }
+.rt-form-row small { font-size:12px; }
 .rt-form-row label { width:140px; float:left; position:relative; padding:14px 0 0 10px; }
 .rt-form-row .rt-form-field { margin-left:150px; }
 .rt-form-tools { margin-top:-20px; background:#efefef; padding:10px 0 10px 150px; }
