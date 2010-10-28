@@ -16,6 +16,7 @@ $area_class .= ' ' . $area_class . '-' . str_replace('_', '-', sfInflector::tabl
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+  <meta charset="utf-8">
 
   <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>
   <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>
@@ -28,16 +29,16 @@ $area_class .= ' ' . $area_class . '-' . str_replace('_', '-', sfInflector::tabl
   <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>
   <?php use_javascript('/rtUserPlugin/js/script.js'); ?>
 
-  <!--[if lt IE 7 ]>
-    <script src="/rtUserPlugin/js/dd_belatedpng.js"></script>
-    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
-  <![endif]-->
-
   <?php include_http_metas() ?>
   <?php include_metas() ?>
   <?php include_title() ?>
   <?php include_stylesheets() ?>
   <?php include_javascripts() ?>
+
+  <!--[if lt IE 7 ]>
+    <script src="/rtUserPlugin/js/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
   
   <?php echo auto_discovery_link_tag('rss', '@rt_blog_page_feed?format=rss') ?>
 
