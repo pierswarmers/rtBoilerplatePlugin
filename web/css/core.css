@@ -19,8 +19,8 @@ img.right { float:right; margin: 0 0 10px 20px;  }
 .rt-pager { text-align:center; }
 .rt-pager ul { list-style-type:none; margin:0; padding:0; }
 .rt-pager ul li, .rt-pager ul li ul { display:inline; }
-.rt-pager-previous, .rt-pager-first { float:left; }
-.rt-pager-next, .rt-pager-last { float:right; text-align:right; }
+.rt-pager-previous, .rt-pager-first { float:left; margin-right:5px; }
+.rt-pager-next, .rt-pager-last { float:right; text-align:right;  margin-left:5px; }
 .rt-pager .here a { text-decoration:none; cursor:default; }
 /*
 
