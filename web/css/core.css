@@ -8,6 +8,7 @@
 */
 ::-moz-selection{ background:yellow; color:#555; }
 ::selection { background:yellow; color:#555; }
+.highlight { background:yellow; color:#555; }
 img.left { float:left; margin: 0 20px 10px 0; }
 img.right { float:right; margin: 0 0 10px 20px;  }
 .rt-search ul, .rt-search li { list-style: none; margin-left:0; }

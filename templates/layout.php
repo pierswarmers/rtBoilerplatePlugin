@@ -24,7 +24,7 @@ $area_class .= ' ' . $area_class . '-' . str_replace('_', '-', sfInflector::tabl
   <?php use_stylesheet('/rtUserPlugin/css/media.css') ?>
   <?php use_stylesheet('/rtUserPlugin/css/handheld.css', '', array('media' => 'handheld')) ?>
 
-  <?php use_javascript('/rtUserPlugin/js/jquery-1.4.2.min.js'); ?>
+  <?php use_javascript('/rtCorePlugin/vendor/jquery/js/jquery.min.js'); ?>
   <?php use_javascript('/rtUserPlugin/js/modernizr-1.6.min.js'); ?>
   <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>
   <?php use_javascript('/rtUserPlugin/js/script.js'); ?>
