@@ -2,10 +2,15 @@
 
 use_helper('I18N');
 
-// add some helpful variables.
 $routes = $sf_context->getRouting()->getRoutes();
-$area_class = str_replace('_', '-', sfInflector::tableize($sf_request->getParameter('module')));
-$area_class .= ' ' . $area_class . '-' . str_replace('_', '-', sfInflector::tableize($sf_request->getParameter('action')));
+
+$module = $sf_request->getParameter('module');
+$action = $sf_request->getParameter('action');
+
+$area_class  = Doctrine_Inflector::urlize(sfInflector::tableize($module));
+$area_class .= ' ' . $area_class .  '-'. Doctrine_Inflector::urlize(sfInflector::tableize($action));
+
+$snippet_area = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-' . sfInflector::tableize($action));
 
 ?>
 <!doctype html>
