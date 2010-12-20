@@ -66,7 +66,11 @@ $snippet_area = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-' 
       <?php include_component('rtSitePage', 'navigation', array('options' => array('render_full' => false))) ?>
       <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
       <?php include_component('rtBlogPage', 'latest') ?>
-    </div> <!--! end of #rt-nav -->
+      <h2><?php echo __('Cart') ?></h2>
+      <?php include_partial('rtShopOrder/cart_mini') ?>
+      <h2><?php echo __('Shop Categories') ?></h2>
+      <?php include_component('rtShopCategory', 'navigation') ?>
+    </div> <!-- end of #rt-nav -->
 
     <div id="rt-body">
 
@@ -81,7 +85,7 @@ $snippet_area = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-' 
         <!-- content body -->
         <?php echo $sf_content ?>
         
-    </div> <!--! end of #rt-body -->
+    </div> <!-- end of #rt-body -->
 
     <div id="rt-footer">
       <ul>
@@ -93,9 +97,9 @@ $snippet_area = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-' 
         <?php endif; ?>
         <li><?php echo link_to(__('sitemap'), 'rt_sitemap') ?></li>
       </ul>
-    </div> <!--! end of #rt-footer -->
+    </div> <!-- end of #rt-footer -->
 
-  </div> <!--! end of #rt-container -->
+  </div> <!-- end of #rt-container -->
 
   <!--rt-admin-holder-->
 

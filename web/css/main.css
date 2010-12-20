@@ -6,13 +6,12 @@
 p,pre,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset { margin-bottom: 20px; }
 h1,h2,h3,h4,h5,h6,legend { font-weight:bold; }
 h1 { font-size:20px; border-bottom:2px solid #CCC; }
-h1 span { float:right; color:#CCC; }
+h1 span { float:right; color:#CCC; font-size:14px; }
 h2, legend { font-size:18px; }
 h3 { font-size:16px; }
 h4 { font-size:15px; }
 h5 { font-size:14px; }
 h6 { font-size:13px; }
-h1 { font-size:20px; }
 legend { display:block; padding-bottom:20px;}
 table { width:100%; }
 label { font-weight:bold; }
