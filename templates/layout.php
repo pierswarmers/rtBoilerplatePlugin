@@ -66,10 +66,6 @@ $snippet_area = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-' 
       <?php include_component('rtSitePage', 'navigation', array('options' => array('render_full' => false))) ?>
       <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
       <?php include_component('rtBlogPage', 'latest') ?>
-      <h2><?php echo __('Cart') ?></h2>
-      <?php include_partial('rtShopOrder/cart_mini') ?>
-      <h2><?php echo __('Shop Categories') ?></h2>
-      <?php include_component('rtShopCategory', 'navigation') ?>
     </div> <!-- end of #rt-nav -->
 
     <div id="rt-body">
