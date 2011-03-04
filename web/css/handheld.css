@@ -1,3 +1,8 @@
+/*
+ * rtBoilerplatePlugin handheld styles
+ *
+ */
+
 * {
   float: none;       /* Screens are not big enough to account for floats */
   background: #fff;  /*  As much contrast as possible */

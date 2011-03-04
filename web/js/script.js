@@ -1,24 +1,16 @@
+/*!
+ *
+ * script.js
+ * 
+ * RediType: rtBoilerplatePlugin
+ * Based upon: http://html5boilerplate.com/
+ *
+ */
+
 $(function(){
   /*
     Section: Your code goes here...
   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,23 +1,41 @@
 /*
+ * This file is part of the reditype package.
+ *
+ * (c) 2009-2010 digital Wranglers <info@wranglers.com.au>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+
+/**
+ * rtBoilerplatePlugin styles
+ *
+ * @package    rtUserPlugin
+ * @subpackage modules
+ * @author     Piers Warmers <piers@wranglers.com.au>
+ * @author     Konny Zurcher <konny@wranglers.com.au>
+ */
+
+/*
   Section: Admin Tools
 */
 .rt-admin-edit-tools-trigger { display: none }
-#rt-body { position:relative; }
+#rt-body                     { position:relative; }
+
 /*
   Section: Misc.
 */
-::-moz-selection{ background:yellow; color:#555; }
-::selection { background:yellow; color:#555; }
-.highlight { background:yellow; color:#555; }
-img.left { float:left; margin: 0 20px 10px 0; }
-img.right { float:right; margin: 0 0 10px 20px;  }
+::-moz-selection { background:yellow; color:#555; }
+::selection      { background:yellow; color:#555; }
+.highlight       { background:yellow; color:#555; }
+img.left         { float:left; margin: 0 20px 10px 0; }
+img.right        { float:right; margin: 0 0 10px 20px;  }
 .rt-search ul, .rt-search li { list-style: none; margin-left:0; }
 /*
 
   Section: Pagination
 
 */
-.rt-pager { text-align:center; clear:left; padding:10px; border:1px solid #ccc; }
+.rt-pager    { text-align:center; clear:left; padding:10px; border:1px solid #ccc; }
 .rt-pager ul { list-style-type:none; margin:0; padding:0; }
 .rt-pager ul li, .rt-pager ul li ul { display:inline; }
 .rt-pager-previous, .rt-pager-first { float:left; margin-right:5px; }
@@ -30,9 +48,9 @@ img.right { float:right; margin: 0 0 10px 20px;  }
 */
 .rt-form-schema { list-style:none; margin:0 0 20px; padding:0;border:1px solid #ccc; }
 .rt-form-schema .rt-highlight { background:#EFEFEF; }
-.rt-form-row  {  padding:0; margin:0; }
-.rt-form-schema .rt-form-row:last-child  {  }
-.rt-form-row div.rt-form-field {  padding:10px 0; }
+.rt-form-row  { padding:0; margin:0; }
+.rt-form-schema .rt-form-row:last-child { }
+.rt-form-row div.rt-form-field { padding:10px 0; }
 .rt-form-row .rt-help { padding-left:10px; }
 /* .rt-form-row .rt-help:before { content:"\2192  "; } */
 .rt-form-row textarea { width:95%; }
@@ -63,7 +81,7 @@ img.right { float:right; margin: 0 0 10px 20px;  }
   Section: Simple Feedback
 
 */
-ul.rt-error-list, .rt-error-list li {  margin:0;padding:0;display:block;list-style: none;font-weight:normal; color:#8a1f11; }
+ul.rt-error-list, .rt-error-list li { margin:0;padding:0;display:block;list-style: none;font-weight:normal; color:#8a1f11; }
 .rt-error-list li { padding:5px 0; }
 .error, .success, .loading, .notice { font-weight:bold; background-color:transparent; background-position:0 50%; background-repeat:no-repeat; border:none; padding:0 0 0 20px; }
 .error { background-image:url(../img/error.png); color:#8a1f11; }
@@ -102,7 +120,7 @@ p.loading { background-color:#EFEFEF; border-color:#CCC; }
 .sfWebDebugActionCache .rt-shop-product-mini {margin-right:18px;}
 .rt-list-item-3 .rt-shop-product-mini, .rt-list-item-6 .rt-shop-product-mini, .rt-list-item-9 .rt-shop-product-mini, .rt-list-item-12 .rt-shop-product-mini, .rt-list-item-15 .rt-shop-product-mini {margin-right:0;}
 .rt-shop-product-mini div.rt-shop-product-mini-image { width: 198px;border-bottom: 1px solid #ccc;  height: 210px; text-align: center; }
-.rt-shop-product-mini div.rt-shop-product-mini-details {  }
+.rt-shop-product-mini div.rt-shop-product-mini-details { }
 .rt-shop-product-mini h3 { font-size: 12px; margin-bottom: 0; padding:10px 0; position: relative; left:10px; width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis; -moz-binding: url('assets/xml/ellipsis.xml#ellipsis'); }
 .rt-shop-product-mini .rt-shop-product-price { margin-bottom:0; padding:0 10px 10px; }
 .rt-shop-product-mini .rt-shop-product-price span { font-size: 11px; }
@@ -160,5 +178,5 @@ span.rt-shop-product-promotion{ position:absolute;top:0;right:0;background:orang
 .rt-tools button { float:right; margin-left:10px; }
 .rt-shop-cart-total { background: #EFEFEF; font-weight:bold; }
 td.rt-shop-cart-quantity input[type=text] { width:50px !important; }
-.rt-shop-order-membership-panel {  }
+.rt-shop-order-membership-panel { }
 .rt-shop-order-addresses th a { float:right; }
