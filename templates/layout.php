@@ -99,7 +99,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
 
         <!-- Content Body -->
         <?php echo $sf_content ?>
-        
+
     </div> <!-- End of #rt-body -->
 
     <div id="rt-footer">
