@@ -1,8 +1,14 @@
 <?php
-// Use the following helpers. Do not remove.
-use_helper('I18N');
+//
+// PHP library helpers to include, this will give you access to
+// some convenient php functions like: rt_menu(), rt_blah()...
+//
+use_helper('I18N', 'rtTemplate');
 
-// Variables. Section can be removed if unused.
+//
+// Some commonly used parameters as variables.
+// This section can be removed if unused.
+//
 $routes        = $sf_context->getRouting()->getRoutes();    // Routes
 $module        = $sf_request->getParameter('module');       // Modulename
 $action        = $sf_request->getParameter('action');       // Actionname
@@ -12,7 +18,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
 ?>
 <!doctype html>
 
-<!------ Set identifier for Internet Explorer Versions -->
+<!------ Set identifier for Internet Explorer versions -->
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
@@ -23,17 +29,17 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <meta charset="utf-8">
 
   <!------ Add CSS Files -->
-  <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>                                        <!-- // Do not edit: Styles to reduce browser inconsistencies -->
-  <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>                                         <!-- // Do not edit: Main boilerplate styles -->
-  <?php use_stylesheet('/rtUserPlugin/css/main.css') ?>                                         <!-- // To be edited: Styles to be edited by the user -->
-  <?php use_stylesheet('/rtUserPlugin/css/media.css') ?>                                        <!-- // To be edited: Media styles -->
-  <?php use_stylesheet('/rtUserPlugin/css/handheld.css', '', array('media' => 'handheld')) ?>   <!-- // To be edited: Styles hand held media devices -->
+  <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>                                        <!-- // Remove browser styles -->
+  <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>                                         <!-- // Main RediType BoilerPlate styles -->
+  <?php use_stylesheet('/rtUserPlugin/css/main.css') ?>                                         <!-- // !! Your stuff goes here !! -->
+  <?php use_stylesheet('/rtUserPlugin/css/media.css') ?>                                        <!-- // Print, projector, screen, etc... -->
+  <?php use_stylesheet('/rtUserPlugin/css/handheld.css', '', array('media' => 'handheld')) ?>   <!-- // Styles for media devices -->
 
   <!------ Add JavaScript Files -->
-  <?php use_javascript('/rtCorePlugin/vendor/jquery/js/jquery.min.js'); ?>  <!-- // Do not edit: Core JQuery library include -->
-  <?php use_javascript('/rtUserPlugin/js/modernizr-1.6.min.js'); ?>         <!-- // Do not edit: Modernizr library include -->
-  <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>                   <!-- // To be edited: Custom JavaScripy code -->
-  <?php use_javascript('/rtUserPlugin/js/script.js'); ?>                    <!-- // To be edited: JQuery specific customisation  -->
+  <?php use_javascript('/rtCorePlugin/vendor/jquery/js/jquery.min.js'); ?>  <!-- // JQuery library -->
+  <?php use_javascript('/rtUserPlugin/js/modernizr-1.6.min.js'); ?>         <!-- // Modernizr library -->
+  <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>                   <!-- // Paste jQuery plugins here -->
+  <?php use_javascript('/rtUserPlugin/js/script.js'); ?>                    <!-- // !! Your stuff goes here !! -->
 
   <!------ Include Meta Data, CSS and JavaScript tags -->
   <?php include_http_metas() ?>           <!-- // Include Http Meta Data -->
@@ -42,6 +48,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <?php include_stylesheets() ?>          <!-- // Render Style Tags -->
   <?php include_javascripts() ?>          <!-- // Render JavaScript Tags -->
 
+  <!------ Include PNG corrections when Internet Explorer 7 or lower is used -->
   <!--[if lt IE 7 ]>
     <script src="/rtUserPlugin/js/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
@@ -50,10 +57,9 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <!------ Feed Tag -->
   <?php echo auto_discovery_link_tag('rss', '@rt_blog_page_feed?format=rss') ?>
 
-  <!------ Favicons -->
+  <!------ Favicon -->
   <link rel="shortcut icon" href="/rtUserPlugin/img/favicon.ico">
   <link rel="apple-touch-icon" href="/rtUserPlugin/img/apple-touch-icon.png">
-  
 </head>
 
 <body class="<?php echo $area_class ?>">
