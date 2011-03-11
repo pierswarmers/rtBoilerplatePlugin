@@ -73,15 +73,15 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
     <div id="rt-nav">
 
       <!------ Search form -->
-      <?php include_partial('rtSearch/form', array('form' => new rtSearchForm())) ?>
-
+      <?php echo rt_get_search_form() ?>
+      
       <!------ Dynamically created site navigation -->
       <h2><?php echo __('Site Pages') ?></h2>
-      <?php include_component('rtSitePage', 'navigation', array('options' => array('render_full' => false))) ?>
+      <?php echo rt_get_nav_full() ?>
 
       <!------ Latest news section -->
       <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
-      <?php include_component('rtBlogPage', 'latest') ?>
+      <?php echo rt_get_blog_latest(); ?>
     </div> <!-- end of #rt-nav -->
 
     <div id="rt-body">
