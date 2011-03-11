@@ -67,9 +67,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <div id="rt-container">
 
     <div id="rt-header">
-
         <?php echo link_to(sfConfig::get('app_rt_title', ''), 'homepage') ?>
-      
     </div> <!--! end of #rt-header -->
 
     <div id="rt-nav">
@@ -84,7 +82,6 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
       <!------ Latest news section -->
       <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
       <?php include_component('rtBlogPage', 'latest') ?>
-      
     </div> <!-- end of #rt-nav -->
 
     <div id="rt-body">
