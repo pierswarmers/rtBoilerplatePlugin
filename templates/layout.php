@@ -87,7 +87,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
     <div id="rt-body">
 
         <!-- Content Heading. Shown if title is set -->
-        <?php if(has_slot('rt-title')): ?>
+        <?php if(!sfConfig::get('app_rt_templates_headers_embedded', true) && has_slot('rt-title')): ?>
           <h1><?php include_slot('rt-title');  ?></h1>
         <?php endif; ?>
 

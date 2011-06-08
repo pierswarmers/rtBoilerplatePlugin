@@ -20,9 +20,9 @@ $(function(){
   /*
     Section: Spice up the form rows to be highlighted.
   */
-  $('.rt-form-row textarea,.rt-form-row input,.rt-form-row select').focus(function(){
-    $(this).parents('li').addClass('rt-highlight');
+  $('.section textarea,.section input,.section select').focus(function(){
+    $(this).parents('li').addClass('highlight');
   }).blur(function(){
-    $(this).parents('li').removeClass('rt-highlight');
+    $(this).parents('li').removeClass('highlight');
   });
 });

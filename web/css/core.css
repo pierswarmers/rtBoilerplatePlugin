@@ -24,9 +24,9 @@
 /*
   Section: Misc.
 */
-::-moz-selection { background:yellow; color:#555; }
-::selection      { background:yellow; color:#555; }
-.highlight       { background:yellow; color:#555; }
+::-moz-selection { background:#FFFFCC; color:#555; }
+::selection      { background:#FFFFCC; color:#555; }
+.highlight       { background:#FFFFCC; color:#555; }
 img.left         { float:left; margin: 0 20px 10px 0; }
 img.right        { float:right; margin: 0 0 10px 20px;  }
 .rt-search ul, .rt-search li { list-style: none; margin-left:0; }
@@ -67,15 +67,6 @@ img.right        { float:right; margin: 0 0 10px 20px;  }
 */
 #recaptcha_area td { background-color: transparent !important; padding-left: 0 !important; padding-top:0 !important; }
 #recaptcha_area table { border:0 !important; }
-/*
-
-  Section: Comments
-
-*/
-.rt-comment-list cite { font-weight: bold; }
-.rt-comment-list ul {list-style:none;  margin-left:0; padding:0; }
-.rt-comment-list li { padding: 10px 10px 10px 69px; border-bottom:1px solid #CCC; margin-left:0; margin-bottom:10px; position:relative;}
-.rt-avatar { position:absolute; left:10px; top:10px; }
 /*
 
   Section: Simple Feedback
@@ -180,3 +171,58 @@ span.rt-shop-product-promotion{ position:absolute;top:0;right:0;background:orang
 td.rt-shop-cart-quantity input[type=text] { width:50px !important; }
 .rt-shop-order-membership-panel { }
 .rt-shop-order-addresses th a { float:right; }
+/*
+
+Roundings
+
+*/
+.section, .section-tools-header, .section-tools-footer { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.section-tools-header { -moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.section-tools-footer { -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+/*
+
+Sections
+
+*/
+.section { margin-bottom: 20px; border: 1px solid #e5e5e5; overflow: hidden; padding-top:20px; }
+.section-tools-header  { margin: -20px 0 20px; background: #f7f7f7; padding: 10px; text-align:right; font-size: 10px; border-bottom: 1px dotted #e5e5e5; }
+.section-tools-header  a { color: #999; text-decoration: none; }
+.section-tools-footer, .section-tools-submit  { background: #f7f7f7; text-align:right; font-size: 10px; padding: 10px; border-top: 1px dotted #e5e5e5; margin: 0; }
+.section-tools-submit  { font-size: 12px; padding-left: 170px; text-align: left; }
+.section  .section-header, legend { color: #222; margin-bottom: 20px; padding: 0 20px 10px; font-size: 20px; border-bottom: 3px double #e5e5e5; }
+.section-header h1, .section-header h2, .section-header h3, legend { margin-bottom:10px; }
+.metas { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px;  }
+.section-content { padding: 0 20px; margin-bottom: 20px; color: #555; position: relative; }
+
+/*
+
+Forms
+
+*/
+form { overflow: hidden; }
+legend { width:100%; }
+/*
+
+  Section: Comments
+
+*/
+.rt-admin-edit-tools-trigger { display:inline; }
+
+/*
+
+  Section: Comments
+
+*/
+.rt-comments ul { margin: 0 20px 0; padding: 0; list-style: none; }
+.rt-comments li { margin: 0 0 20px; padding: 0; }
+.rt-comments cite { font-weight: bold; display:block; font-style: normal; }
+.rt-comments cite a, .rt-comments small a { text-decoration:none; color: #555; }
+.rt-comments small.metas  { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px; padding: 10px 0; display:block; border-bottom: 1px dotted #e5e5e5;  }
+.rt-comments .section-repeater div { margin-left: 90px; }
+.rt-comments img { float: left; padding: 3px; border: 1px solid #e5e5e5; }
+
+
+
+
+
+
