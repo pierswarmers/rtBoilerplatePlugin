@@ -62,7 +62,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <link rel="apple-touch-icon" href="/rtUserPlugin/img/apple-touch-icon.png">
 </head>
 
-<body class="<?php echo $area_class ?>">
+<body class="<?php echo $area_class ?> <?php echo $sf_user->hasCredential('show_admin_menu') ? 'is-admin' : ''; ?>">
 
   <div id="rt-container">
 

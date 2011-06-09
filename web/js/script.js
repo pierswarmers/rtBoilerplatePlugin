@@ -20,7 +20,7 @@ $(function(){
   /*
     Section: Spice up the form rows to be highlighted.
   */
-  $('.section textarea,.section input,.section select').focus(function(){
+  $('.rt-section textarea,.rt-section input,.rt-section select').focus(function(){
     $(this).parents('li').addClass('highlight');
   }).blur(function(){
     $(this).parents('li').removeClass('highlight');

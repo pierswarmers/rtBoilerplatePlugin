@@ -18,7 +18,6 @@
 /*
   Section: Admin Tools
 */
-.rt-admin-edit-tools-trigger { display: none }
 #rt-body                     { position:relative; }
 
 /*
@@ -46,20 +45,19 @@ img.right        { float:right; margin: 0 0 10px 20px;  }
   Section: Forms
 
 */
-.rt-form-schema { list-style:none; margin:0 0 20px; padding:0;border:1px solid #ccc; }
+.rt-form-schema { list-style:none; margin: 0; padding: 0; }
 .rt-form-schema .rt-highlight { background:#EFEFEF; }
-.rt-form-row  { padding:0; margin:0; }
+.rt-form-row  { padding:0 0 0 20px; margin:0; }
 .rt-form-schema .rt-form-row:last-child { }
 .rt-form-row div.rt-form-field { padding:10px 0; }
-.rt-form-row .rt-help { padding-left:10px; }
-/* .rt-form-row .rt-help:before { content:"\2192  "; } */
+.rt-form-row .rt-help {  }
+.rt-form-row .rt-help:before { content:"\2192  "; }
 .rt-form-row textarea { width:95%; }
-.rt-form-row input[type=text], .rt-form-row input[type=password] { width:200px; }
-.rt-form-row small { font-size:12px; }
-.rt-form-row label { width:140px; float:left; position:relative; padding:14px 0 0 10px; }
+.rt-form-row input[type=text], .rt-form-row input[type=password] { width:200px; margin-right: 10px; }
+.rt-form-row input[type=checkbox] { margin-right:10px; }
+.rt-form-row small { font-size:10px; }
+.rt-form-row label { width:140px; float:left; position:relative; padding:14px 0 0; }
 .rt-form-row .rt-form-field { margin-left:150px; }
-.rt-form-tools { margin-top:-20px; background:#efefef; padding:10px 0 10px 150px; }
-.rt-form-tools button { margin-right:10px; }
 /*
 
   Section: ReCAPTCHA
@@ -67,6 +65,7 @@ img.right        { float:right; margin: 0 0 10px 20px;  }
 */
 #recaptcha_area td { background-color: transparent !important; padding-left: 0 !important; padding-top:0 !important; }
 #recaptcha_area table { border:0 !important; }
+.rt-captcha input { width:80px !important; }
 /*
 
   Section: Simple Feedback
@@ -176,49 +175,48 @@ td.rt-shop-cart-quantity input[type=text] { width:50px !important; }
 Roundings
 
 */
-.section, .section-tools-header, .section-tools-footer { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-.section-tools-header { -moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-.section-tools-footer { -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+.rt-section, .rt-section-tools-header, .rt-section-tools-footer, button { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.rt-section-tools-header { -moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.rt-section-tools-footer, .rt-section-tools-submit { -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
 /*
 
 Sections
 
 */
-.section { margin-bottom: 20px; border: 1px solid #e5e5e5; overflow: hidden; padding-top:20px; }
-.section-tools-header  { margin: -20px 0 20px; background: #f7f7f7; padding: 10px; text-align:right; font-size: 10px; border-bottom: 1px dotted #e5e5e5; }
-.section-tools-header  a { color: #999; text-decoration: none; }
-.section-tools-footer, .section-tools-submit  { background: #f7f7f7; text-align:right; font-size: 10px; padding: 10px; border-top: 1px dotted #e5e5e5; margin: 0; }
-.section-tools-submit  { font-size: 12px; padding-left: 170px; text-align: left; }
-.section  .section-header, legend { color: #222; margin-bottom: 20px; padding: 0 20px 10px; font-size: 20px; border-bottom: 3px double #e5e5e5; }
-.section-header h1, .section-header h2, .section-header h3, legend { margin-bottom:10px; }
-.metas { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px;  }
-.section-content { padding: 0 20px; margin-bottom: 20px; color: #555; position: relative; }
-
+.rt-section { margin-bottom: 20px; border: 1px solid #e5e5e5; overflow: hidden; padding-top:20px; }
+.rt-section-tools-header, .rt-snippet .rt-admin-tools  { margin: -20px 0 20px; background: #f7f7f7; padding: 10px; text-align:right; font-size: 10px; border-bottom: 1px dotted #e5e5e5; }
+.rt-section-tools-header  a, .rt-snippet .rt-admin-tools a { color: #999; text-decoration: none; }
+.rt-section-tools-footer, .rt-section-tools-submit  { background: #f7f7f7; text-align:right; font-size: 11px; padding: 10px; border-top: 1px dotted #e5e5e5; margin: 0; }
+.rt-section-tools-submit  { font-size: 11px; padding-left: 170px; text-align: left; margin-top: -20px; }
+.rt-section .rt-section-header, legend { color: #222; margin-bottom: 20px; padding: 0 20px 10px; font-size: 20px; border-bottom: 3px double #e5e5e5; }
+.rt-section-header h1, .rt-section-header h2, .rt-section-header h3, legend { margin-bottom:10px; }
+.rt-metas { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px;  }
+.rt-section-content { padding: 0 20px; margin-bottom: 20px; color: #555; position: relative; }
 /*
 
 Forms
 
 */
-form { overflow: hidden; }
-legend { width:100%; }
+.rt-form-schema, .rt-section-tools-submit { margin: 0 -20px -20px; }
+.rt-section-content legend { width:100%; margin: 0 -20px }
+.rt-section-tools-submit button { margin-right: 10px; }
 /*
 
   Section: Comments
 
 */
-.rt-admin-edit-tools-trigger { display:inline; }
-
+.rt-admin-tools { display: none; }
+.rt-snippet .rt-admin-tools { background: transparent; }
+.is-admin .rt-admin-tools { display: block; }
 /*
 
   Section: Comments
 
 */
-.rt-comments ul { margin: 0 20px 0; padding: 0; list-style: none; }
-.rt-comments li { margin: 0 0 20px; padding: 0; }
 .rt-comments cite { font-weight: bold; display:block; font-style: normal; }
 .rt-comments cite a, .rt-comments small a { text-decoration:none; color: #555; }
 .rt-comments small.metas  { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px; padding: 10px 0; display:block; border-bottom: 1px dotted #e5e5e5;  }
-.rt-comments .section-repeater div { margin-left: 90px; }
+.rt-comments .rt-section-repeater div { margin-left: 90px; }
 .rt-comments img { float: left; padding: 3px; border: 1px solid #e5e5e5; }
 
 
