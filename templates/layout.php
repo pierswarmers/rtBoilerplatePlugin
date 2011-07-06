@@ -81,7 +81,20 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
 
       <!------ Latest news section -->
       <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
-      <?php echo rt_get_blog_latest(); ?>
+      <?php echo rt_get_blog_latest(); ?>      
+      
+      <!------ Shop section -->
+      <?php if($sf_context->getInstance()->getRouting()->hasRouteName('rt_shop_order_cart')): ?>
+        
+        <?php use_helper('rtShopTemplate'); ?>
+        <h2><?php echo __('Mini-Cart') ?></h2>
+        <?php echo rt_shop_get_mini_cart() ?>
+        
+        <h2><?php echo __('Shop Categories') ?></h2>
+        <?php echo rt_shop_get_category_list() ?>
+        
+      <?php endif; ?>
+     
     </div> <!-- end of #rt-nav -->
 
     <div id="rt-body">
