@@ -21,6 +21,7 @@ button:hover { background:#555; }
 table, th, td { border:1px solid #CCC; }
 th, td { padding:10px; border-collapse:collapse; }
 th { background:#efefef }
+dd { margin-left: 10px; }
 
 #rt-container { width: 960px; margin: 0 auto; text-align: left; background: url(../img/border.png) 668px 0 repeat-y; }
 

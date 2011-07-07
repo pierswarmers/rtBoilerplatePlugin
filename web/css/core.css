@@ -232,3 +232,11 @@ Forms
 .rt-shop-product-mini .rt-admin-tools   { position: relative; float: left; padding: 5px 10px; margin: 0 15px 15px 0; background: #EFEFEF; border-right: #E5E5E5 dotted 1px; border-bottom: #E5E5E5 dotted 1px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
 .rt-shop-product-mini .rt-admin-tools a { color: #999; text-decoration: none; font-size: 10px; font-weight: normal; line-height: 12px; }
 .rt-admin-tools a:hover                 { color: #000; }
+/*
+
+  Side section: Widgets
+
+*/
+#rt-nav .rt-section         { margin-left: 10px; }
+#rt-nav .rt-section-header  { border-bottom: 1px solid #E5E5E5; padding: 0; }
+#rt-nav .rt-section-content { margin-bottom: 0; }

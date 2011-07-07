@@ -73,25 +73,75 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
     <div id="rt-nav">
 
       <!------ Search form -->
-      <?php echo rt_get_search_form() ?>
+      <div class="rt-section rt-search-widget">
+        <div class="rt-section-content">
+          <?php echo rt_get_search_form() ?>
+        </div>
+      </div>
       
       <!------ Dynamically created site navigation -->
-      <h2><?php echo __('Site Pages') ?></h2>
-      <?php echo rt_get_nav_full() ?>
+      <div class="rt-section rt-nav-widget">
+        <div class="rt-section-header">
+          <h2><?php echo __('Site Pages') ?></h2>
+        </div>
+        <div class="rt-section-content">
+          <?php echo rt_get_nav_full() ?>
+        </div>
+      </div>
 
       <!------ Latest news section -->
-      <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
-      <?php echo rt_get_blog_latest(); ?>      
+      <div class="rt-section rt-blog-page-latest-widget">
+        <div class="rt-section-header">
+          <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
+        </div>
+        <div class="rt-section-content">
+          <?php echo rt_get_blog_latest(); ?>
+        </div>
+      </div>
+
+      <!------ Blog archive section -->
+      <div class="rt-section rt-blog-page-archive-widget">
+        <div class="rt-section-header">
+          <h2><?php echo __('Blog Archive') ?></h2>
+        </div>
+        <div class="rt-section-content">
+          <?php echo rt_get_blog_archive(); ?>
+        </div>
+      </div>
+      
+      <!------ Tag cloud section -->
+      <div class="rt-section rt-tag-cloud-widget">
+        <div class="rt-section-header">
+          <h2><?php echo __('Tag Cloud') ?></h2>
+        </div>
+        <div class="rt-section-content">
+          <?php echo rt_get_tag_cloud(); ?>
+        </div>
+      </div>
       
       <!------ Shop section -->
       <?php if($sf_context->getInstance()->getRouting()->hasRouteName('rt_shop_order_cart')): ?>
         
+        <!------ Shop: Mini-cart section -->
         <?php use_helper('rtShopTemplate'); ?>
-        <h2><?php echo __('Mini-Cart') ?></h2>
-        <?php echo rt_shop_get_mini_cart() ?>
-        
-        <h2><?php echo __('Shop Categories') ?></h2>
-        <?php echo rt_shop_get_category_list() ?>
+        <div class="rt-section rt-shop-mini-cart-widget">
+          <div class="rt-section-header">
+            <h2><?php echo __('Mini-Cart') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_shop_get_mini_cart() ?>
+          </div>
+        </div>
+      
+        <!------ Shop: Categories section -->
+        <div class="rt-section rt-shop-categories-widget">
+          <div class="rt-section-header">
+            <h2><?php echo __('Shop Categories') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_shop_get_category_list() ?>
+          </div>
+        </div>
         
       <?php endif; ?>
      
