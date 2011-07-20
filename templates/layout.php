@@ -31,7 +31,6 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <!------ Add CSS Files -->
   <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>                                        <!-- // Remove browser styles -->
   <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>                                         <!-- // Main RediType BoilerPlate styles -->
-  <?php use_stylesheet('/rtUserPlugin/css/main.css') ?>                                         <!-- // !! Your stuff goes here !! -->
   <?php use_stylesheet('/rtUserPlugin/css/media.css') ?>                                        <!-- // Print, projector, screen, etc... -->
   <?php use_stylesheet('/rtUserPlugin/css/handheld.css', '', array('media' => 'handheld')) ?>   <!-- // Styles for media devices -->
 
@@ -68,99 +67,92 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
 
     <div id="rt-header">
         <?php echo link_to(sfConfig::get('app_rt_title', ''), 'homepage') ?>
+        <!------ Search form -->
+        <div class="rt-section rt-core-search-widget">
+          <div class="rt-section-content">
+            <?php echo rt_get_search_form() ?>
+          </div>
+        </div>
     </div> <!--! end of #rt-header -->
 
-    <div id="rt-nav">
+    <div id="rt-inner" class="clearfix">
 
-      <!------ Search form -->
-      <div class="rt-section rt-search-widget">
-        <div class="rt-section-content">
-          <?php echo rt_get_search_form() ?>
-        </div>
-      </div>
-      
-      <!------ Dynamically created site navigation -->
-      <div class="rt-section rt-nav-widget">
-        <div class="rt-section-header">
-          <h2><?php echo __('Site Pages') ?></h2>
-        </div>
-        <div class="rt-section-content">
-          <?php echo rt_get_nav_full() ?>
-        </div>
-      </div>
+      <div id="rt-side">
 
-      <!------ Latest news section -->
-      <div class="rt-section rt-blog-page-latest-widget">
-        <div class="rt-section-header">
-          <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
-        </div>
-        <div class="rt-section-content">
-          <?php echo rt_get_blog_latest(); ?>
-        </div>
-      </div>
+        <!------ Shop section -->
+        <?php if($sf_context->getInstance()->getRouting()->hasRouteName('rt_shop_order_cart')): ?>
 
-      <!------ Blog archive section -->
-      <div class="rt-section rt-blog-page-archive-widget">
-        <div class="rt-section-header">
-          <h2><?php echo __('Blog Archive') ?></h2>
-        </div>
-        <div class="rt-section-content">
-          <?php echo rt_get_blog_archive(); ?>
-        </div>
-      </div>
-      
-      <!------ Tag cloud section -->
-      <div class="rt-section rt-tag-cloud-widget">
-        <div class="rt-section-header">
-          <h2><?php echo __('Tag Cloud') ?></h2>
-        </div>
-        <div class="rt-section-content">
-          <?php echo rt_get_tag_cloud(); ?>
-        </div>
-      </div>
-      
-      <!------ Shop section -->
-      <?php if($sf_context->getInstance()->getRouting()->hasRouteName('rt_shop_order_cart')): ?>
-        
-        <!------ Shop: Mini-cart section -->
-        <?php use_helper('rtShopTemplate'); ?>
-        <div class="rt-section rt-shop-mini-cart-widget">
-          <div class="rt-section-header">
-            <h2><?php echo __('Mini-Cart') ?></h2>
+          <!------ Shop: Mini-cart section -->
+          <?php use_helper('rtShopTemplate'); ?>
+          <div class="rt-section rt-shop-cart-widget">
+            <div class="rt-section-header">
+              <h2><?php echo __('Your Shopping Cart') ?></h2>
+            </div>
+            <div class="rt-section-content">
+              <?php echo rt_shop_get_mini_cart() ?>
+            </div>
           </div>
-          <div class="rt-section-content">
-            <?php echo rt_shop_get_mini_cart() ?>
-          </div>
-        </div>
-      
-        <!------ Shop: Categories section -->
-        <div class="rt-section rt-shop-categories-widget">
-          <div class="rt-section-header">
-            <h2><?php echo __('Shop Categories') ?></h2>
-          </div>
-          <div class="rt-section-content">
-            <?php echo rt_shop_get_category_list() ?>
-          </div>
-        </div>
-        
-      <?php endif; ?>
-     
-    </div> <!-- end of #rt-nav -->
 
-    <div id="rt-body">
+          <!------ Shop: Categories section -->
+          <div class="rt-section rt-shop-categories-widget">
+            <div class="rt-section-header">
+              <h2><?php echo __('Shop Categories') ?></h2>
+            </div>
+            <div class="rt-section-content">
+              <?php echo rt_shop_get_category_list() ?>
+            </div>
+          </div>
 
-        <!-- Content Heading. Shown if title is set -->
-        <?php if(!sfConfig::get('app_rt_templates_headers_embedded', true) && has_slot('rt-title')): ?>
-          <h1><?php include_slot('rt-title');  ?></h1>
         <?php endif; ?>
 
-        <!-- Error or Success Messages -->
-        <?php include_partial('rtAdmin/flashes_public') ?>
+        <!------ Dynamically created site navigation -->
+        <div class="rt-section rt-site-nav-widget">
+          <div class="rt-section-header">
+            <h2><?php echo __('Site Pages') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_get_nav_full() ?>
+          </div>
+        </div>
 
-        <!-- Content Body -->
-        <?php echo $sf_content ?>
+        <!------ Latest news section -->
+        <div class="rt-section rt-blog-latest-widget">
+          <div class="rt-section-header">
+            <h2><?php echo link_to(__('Latest News'), 'rt_blog_page_index') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_get_blog_latest(); ?>
+          </div>
+        </div>
 
-    </div> <!-- End of #rt-body -->
+        <!------ Blog archive section -->
+        <div class="rt-section rt-blog-archive-widget">
+          <div class="rt-section-header">
+            <h2><?php echo __('Blog Archive') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_get_blog_archive(); ?>
+          </div>
+        </div>
+
+      </div> <!-- end of #rt-nav -->
+
+      <div id="rt-content">
+
+          <!-- Content Heading. Shown if title is set -->
+          <?php if(!sfConfig::get('app_rt_templates_headers_embedded', true) && has_slot('rt-title')): ?>
+            <h1><?php include_slot('rt-title');  ?></h1>
+          <?php endif; ?>
+
+          <!-- Error or Success Messages -->
+          <?php include_partial('rtAdmin/flashes_public') ?>
+
+          <!-- Content Body -->
+          <?php echo $sf_content ?>
+
+      </div> <!-- End of #rt-body -->
+
+    </div> <!-- End of #rt-inner -->
 
     <div id="rt-footer">
 
@@ -174,10 +166,12 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
         <?php endif; ?>
         <li><?php echo link_to(__('sitemap'), 'rt_sitemap') ?></li>
       </ul>
-      
+
+      <div id="badge">Built by <a class="wranglers" href="http://wranglers.com.au" target="_blank">digital Wranglers - Web Design and Development in Sydney</a> Powered by <a class="reditype" href="http://reditype.com" target="_blank">Reditype - Open Source CMS and eCommerce built on Symfony</a></div>
+
     </div> <!-- End of #rt-footer -->
 
-  </div> <!-- End of #rt-container -->
+    </div> <!-- End of #rt-container -->
 
   <!-- RediType Toolbar Handler -->
   <!--rt-admin-holder-->
