@@ -29,16 +29,15 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <meta charset="utf-8">
 
   <!------ Add CSS Files -->
-  <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>                                        <!-- // Remove browser styles -->
-  <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>                                         <!-- // Main RediType BoilerPlate styles -->
-  <?php use_stylesheet('/rtUserPlugin/css/media.css') ?>                                        <!-- // Print, projector, screen, etc... -->
-  <?php use_stylesheet('/rtUserPlugin/css/handheld.css', '', array('media' => 'handheld')) ?>   <!-- // Styles for media devices -->
+  <?php use_stylesheet('http://fonts.googleapis.com/css?family=Copse&v2') ?>
+  <?php use_stylesheet('/rtUserPlugin/css/reset.css') ?>                    <!-- // Remove browser styles -->
+  <?php use_stylesheet('/rtUserPlugin/css/core.css') ?>                     <!-- // !! Your CSS stuff goes here !! -->
 
   <!------ Add JavaScript Files -->
   <?php use_javascript('/rtCorePlugin/vendor/jquery/js/jquery.min.js'); ?>  <!-- // JQuery library -->
   <?php use_javascript('/rtUserPlugin/js/modernizr-1.6.min.js'); ?>         <!-- // Modernizr library -->
   <?php use_javascript('/rtUserPlugin/js/plugins.js'); ?>                   <!-- // Paste jQuery plugins here -->
-  <?php use_javascript('/rtUserPlugin/js/script.js'); ?>                    <!-- // !! Your stuff goes here !! -->
+  <?php use_javascript('/rtUserPlugin/js/script.js'); ?>                    <!-- // !! Your JS stuff goes here !! -->
 
   <!------ Include Meta Data, CSS and JavaScript tags -->
   <?php include_http_metas() ?>           <!-- // Include Http Meta Data -->
