@@ -38,9 +38,9 @@
 
     body { background: #efefef; font: 13px/1.5 Helvetica,Arial,'Liberation Sans',FreeSans,sans-serif; }
 
-    .shout, .kicker { padding: 10px 10px 10px 34px; font-weight: bold; background: url(../img/notice.png) 10px 14px no-repeat #CCC; color: #FFF;  }
-    .kicker { background: url(../img/notice.png) 10px 14px no-repeat #3366CC; }
-    .shout { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1); }
+    .shout, .kicker { padding: 10px 10px 10px 34px; font-weight: bold; background: url(../img/shout.png) 10px 14px no-repeat #555; color: #FFF;  }
+    .kicker { background: url(../img/kicker.png) 10px 14px no-repeat #3366CC; }
+    .shout { }
     .shout p:last-child, .kicker p:last-child { margin-bottom: 0; }
 
     button, a.button { background:#F47A20; color: #FFF; text-decoration: none; border: 0 ;}
@@ -80,41 +80,37 @@
 /* #Admin Tools
 ================================================== */
 
-    .rt-admin-tools { background: #efefef; text-align:right; padding: 10px; font-size: 80%; }
-    .rt-admin-tools a { display: inline-block; color: #fff; background:  #999; padding: 3px 5px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); text-decoration: none; font-weight: bold; }
-    .rt-admin-tools a:hover { background:  #555; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8); }
+    .rt-admin-tools          { background: #efefef; text-align:right; padding: 10px; font-size: 80%; }
+    .rt-admin-tools a        { display: inline-block; color: #fff; background:  #999; padding: 3px 5px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); text-decoration: none; font-weight: bold; }
+    .rt-admin-tools a:hover  { background:  #555; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8); }
 
 /* #Forms
 ================================================== */
 
-    .rt-form-schema { list-style:none; margin: 0; padding: 0; }
-    .rt-form-row  { padding: 5px 5px 5px 0; margin:0; }
-    .rt-form-schema .highlight { background: transparent; }
-    .rt-form-row .rt-help { display: block }
-    .rt-form-row .rt-captcha input { width: 100px; }
-    .rt-form-row  #rating               { margin: 0 10px; }
-
-
-    input[type=text], input[type=password], textarea {     width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box; background: #FFF; border: 1px solid #555; border-color: #C3C3C3 #AEAEAE #999; border-width: 1px; padding: 8px 6px 7px; -moz-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); }
+    .rt-form-schema                 { list-style:none; margin: 0; padding: 0; }
+    .rt-form-row                    { padding: 5px 5px 5px 0; margin:0; }
+    .rt-form-schema .highlight      { background: transparent; }
+    .rt-form-row .rt-help           { display: block }
+    .rt-form-row .rt-captcha input  { width: 100px; }
+    .rt-form-row  #rating           { margin: 0 10px; }
+    input[type=text], input[type=password], textarea {     width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background: #FFF; border: 1px solid #555; border-color: #C3C3C3 #AEAEAE #999; border-width: 1px; padding: 8px 6px 7px; -moz-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15); }
+    input[name="rt_guard_user[billing_address][postcode]"], input[name="rt_guard_user[shipping][postcode]"] { width:300px; }
+    select                          { padding: 5px; }
     input[type=text]:focus, input[type=password]:focus, textarea:focus { -moz-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05); -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05); box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05); outline: none; }
-
-    button[type=submit], a.button { padding: 8px 6px 7px; font-weight: bold; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1); text-transform: uppercase; }
-    @-moz-document url-prefix() { #button input[type=submit] { padding: 8px 6px 7px; }}
+    button[type=submit], a.button   { padding: 8px 6px 7px; font-weight: bold; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1); text-transform: uppercase; }
+    @-moz-document url-prefix()     { .rt-search button { padding: 8px 6px 5px; }}
 
 /* #Feedback Messages
 ================================================== */
 
-    ul.rt-error-list, .rt-error-list li { margin: 0; padding: 0; list-style: none; color:#8a1f11; }
-    .rt-error-list li { padding: 7px 0 7px 16px; background: url(../img/error_alt.png) 0 50% no-repeat transparent; }
-    .error, .success, .loading, .notice { font-weight:bold; background: url(../img/loading.gif) 0 50% no-repeat transparent; color: #333; }
+    ul.rt-error-list, .rt-error-list li     { margin: 0; padding: 0; list-style: none; color:#8a1f11; }
+    .rt-error-list li                       { padding: 7px 0 7px 16px; background: url(../img/error_alt.png) 0 50% no-repeat transparent; }
+    .error, .success, .loading, .notice     { font-weight:bold; background: url(../img/loading.gif) 0 50% no-repeat transparent; color: #333; }
     p.error, p.notice, p.success, p.loading { padding:10px 10px 10px 34px; margin-bottom:1em;  color: #fff; }
-    p.error { background: url(../img/error.png) 10px 50% no-repeat #8a1f11; }
-    p.success { background: url(../img/success.png) 10px 50% no-repeat #529214; }
-    p.notice { background: url(../img/notice.png) 10px 50% no-repeat #3366CC; }
-    p.loading { background: url(../img/loading.gif) 10px 50% no-repeat #EFEFEF; }
+    p.error                                 { background: url(../img/error.png) 10px 50% no-repeat #8a1f11; }
+    p.success                               { background: url(../img/success.png) 10px 50% no-repeat #529214; }
+    p.notice                                { background: url(../img/notice.png) 10px 50% no-repeat #3366CC; }
+    p.loading                               { background: url(../img/loading.gif) 10px 50% no-repeat #EFEFEF; }
 
 /* #Comments and Ratings
 ================================================== */
