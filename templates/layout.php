@@ -60,7 +60,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <link rel="apple-touch-icon" href="/rtUserPlugin/img/apple-touch-icon.png">
 </head>
 
-<body class="<?php echo $area_class ?> <?php echo $sf_user->hasCredential('show_admin_menu') ? 'is-admin' : ''; ?>">
+<body>
 
   <div id="rt-container">
 
@@ -78,9 +78,19 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
 
       <div id="rt-side">
 
+        <!------ Dropdown Mini-Nav section -->
+        <div class="rt-section rt-site-nav-dropdown">
+          <div class="rt-section-header">
+            <h2><?php echo __('Quick Links') ?></h2>
+          </div>
+          <div class="rt-section-content">
+            <?php echo rt_get_nav_dropdown() ?>
+          </div>
+        </div>
+
         <!------ Shop section -->
         <?php if($sf_context->getInstance()->getRouting()->hasRouteName('rt_shop_order_cart')): ?>
-
+        
           <!------ Shop: Mini-cart section -->
           <?php use_helper('rtShopTemplate'); ?>
           <div class="rt-section rt-shop-cart-widget">

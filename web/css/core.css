@@ -57,9 +57,12 @@
     #rt-side .rt-section-header  h2 { margin: 0; font-size: 14px; }
     #rt-side .rt-section-content { padding: 10px 10px 0; }
 
-    .rounded, #rt-inner, button, a.button, #rt-side .rt-section, #rt-side .rt-section-header, input[type=text], input[type=password], textarea, .rt-flash-message, .rt-admin-tools a, .rt-admin-tools, .shout, .kicker { border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+    .rounded, #rt-inner, button, a.button, #rt-side .rt-section, #rt-side .rt-section-header, input[type=text],
+    input[type=password], textarea, .rt-flash-message, .rt-admin-tools a, .rt-admin-tools, .shout, .kicker, .rt-shop-product-mini { border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
     .flat-right, .rt-core-search-widget input { border-bottom-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomright: 0; -moz-border-radius-topright: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-top-right-radius: 0; }
     .flat-left, .rt-core-search-widget button { border-bottom-left-radius: 0; border-top-left-radius: 0; -moz-border-radius-bottomleft: 0; -moz-border-radius-topleft: 0; -webkit-border-bottom-leftradius: 0; -webkit-border-top-left-radius: 0; }
+    .flat-top, .rt-shop-product-mini .details { border-top-right-radius: 0; border-top-left-radius: 0; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -webkit-border-top-leftradius: 0; -webkit-border-top-right-radius: 0; }
+    .flat-bottom, #rt-side .rt-section-header, .rt-shop-product-mini .rt-admin-tools { border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-leftradius: 0; -webkit-border-bottom-right-radius: 0; }
 
     #rt-side .rt-section-header, #rt-inner { border-width: 0; }
 
@@ -69,8 +72,6 @@
     .rt-section-header h1, .rt-section-header h2, .rt-section-header h3, legend { margin-bottom:10px; font-family: Copse, Arial, serif; font-weight: 400; width: 100%; }
     .rt-metas { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 10px;  }
     .rt-section-tools-footer, .rt-section-tools-submit  { padding-top: 10px; border-top: 3px double #DEDEDE; margin: 0; }
-
-    .flat-footer, #rt-side .rt-section-header { border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0; }
 
     ::-moz-selection { background:#FFFFCC; color:#555; }
     ::selection      { background:#FFFFCC; color:#555; }
@@ -129,6 +130,21 @@
     .rt-metas .rt-rating-graph, .rt-metas .rt-rating-graph div { background-position: 0 -20px; height: 10px; }
     .rt-metas .rt-rating-graph { width: 50px; }
 
+
+/* #Product Categories
+================================================== */
+
+    .rt-shop-product-mini                    { float:left; width: 30.8%; margin-right:3%;  margin-bottom:20px; border:1px solid #DEDEDE; }
+    .item-3 .rt-shop-product-mini, .item-6 .rt-shop-product-mini, .item-9 .rt-shop-product-mini, .item-12 .rt-shop-product-mini, .item-15 .rt-shop-product-mini {margin-right:0;}
+    .rt-shop-product-mini .rt-admin-tools    { margin-bottom: 0; }
+    .rt-shop-product-mini img                { display: block;  }
+    .rt-shop-product-mini .image             { position:relative; }
+    .rt-shop-product-mini .details           { background: #EFEFEF; padding:  10px; }
+    .rt-shop-product-mini h3, .rt-shop-product-mini .price  { width: 100%; overflow: hidden; font-size: 12px; margin: 0;  white-space: nowrap; width: 100%; text-overflow: ellipsis; -o-text-overflow: ellipsis; -moz-binding: url('assets/xml/ellipsis.xml#ellipsis'); }
+    .rt-shop-product-mini .price             { font-size: 11px; }
+    .rt-shop-product-mini a                  { text-decoration: none; }
+    .rt-shop-product-mini .promotion         { position:absolute; top:0; right:0; background: #F47A20; color:#fff; padding:5px; }
+
 /* #Layout Specific Niceties
 ================================================== */
 
@@ -141,6 +157,11 @@
     .rt-core-search-widget { float: right; padding-top: 15px; }
     .rt-core-search-widget * { float: left;}
     .rt-core-search-widget input[type=text] { border: 0; width: 180px; }
+
+
+    #rt-side .rt-site-nav-dropdown, #rt-side .rt-site-nav-dropdown .rt-section-content { border:  0; padding: 0; }
+#rt-side .rt-site-nav-dropdown select { width: 100%; }
+    .rt-site-nav-dropdown   .rt-section-header { display: none; }
 
     
 
@@ -168,6 +189,8 @@
     #rt-content            { width: 630px; }
     #rt-footer             { clear: both; padding-top: 20px; }
 
+   .rt-site-nav-dropdown   { display: none; }
+
 /* #Smaller
 ================================================== */
 
@@ -191,7 +214,6 @@
         #rt-side               {  }
         #rt-content            { width: auto; margin-right: 290px; }
         #rt-content img        { max-width: 100% }
-
     }
 
 /*	#Mobile (Portrait)
@@ -200,6 +222,8 @@
 	/* Note: Design for a width of 320px */
 
 	@media only screen and (max-width: 767px) {
+        .rt-shop-product-mini { float:left; width: 47.8%; margin-right:3%; }
+        .item-2 .rt-shop-product-mini, .item-4 .rt-shop-product-mini, .item-4 .rt-shop-product-mini, .item-8 .rt-shop-product-mini, .item-10 .rt-shop-product-mini, .item-12 .rt-shop-product-mini, .item-14 .rt-shop-product-mini {margin-right:0;}
 
         h1 { font-size:20px; padding-top: 0; }
 
@@ -211,6 +235,8 @@
             #rt-side .rt-section { display: none; }
             #rt-side .rt-core-search-widget { display: block; }
             #rt-side .rt-shop-cart-widget { display: block; }
+            #rt-side .rt-site-nav-dropdown   { display: block; }
+        
         #rt-content            { width: auto; margin-right: 0;}
         #rt-content img        { max-width: 100% }
 
@@ -224,6 +250,9 @@
 	/* Note: Design for a width of 480px */
 
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+        .rt-shop-product-mini                    { float:left; width: 30.8%; margin-right:3% !important;  }
+        .item-3 .rt-shop-product-mini, .item-6 .rt-shop-product-mini, .item-9 .rt-shop-product-mini, .item-12 .rt-shop-product-mini, .item-15 .rt-shop-product-mini {margin-right:0  !important;}
 
         #rt-header a           { width:135px; height: 40px; background: url(../img/logo-medium.png);  }
         #rt-header .rt-core-search-widget { padding-top: 5px;  }
