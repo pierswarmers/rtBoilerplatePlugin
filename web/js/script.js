@@ -14,15 +14,28 @@ $(function(){
 
 
 
+    /*
+    * Skeleton V1.0.3
+    * Copyright 2011, Dave Gamache
+    * www.getskeleton.com
+    * Free to use under the MIT license.
+    * http://www.opensource.org/licenses/mit-license.php
+    * 7/17/2011
+    */
 
-
-
-  /*
-    Section: Spice up the form rows to be highlighted.
-  */
-  $('.rt-section textarea,.rt-section input,.rt-section select').focus(function(){
-    $(this).parents('li').addClass('highlight');
-  }).blur(function(){
-    $(this).parents('li').removeClass('highlight');
-  });
+	/* Tabs Activiation
+	================================================== */
+	var tabs = $('ul.tabs');
+	tabs.each(function(i) {
+		var tab = $(this).find('> li > a');
+		tab.click(function(e) {
+			var contentLocation = $(this).attr('href') + "Tab";
+			if(contentLocation.charAt(0)=="#") {
+				e.preventDefault();
+				tab.removeClass('active');
+				$(this).addClass('active');
+				$(contentLocation).show().addClass('active').siblings().hide().removeClass('active');
+			}
+		});
+	});
 });
