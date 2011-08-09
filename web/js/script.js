@@ -1,7 +1,7 @@
 /*!
  *
  * script.js
- * 
+ *
  * RediType: rtBoilerplatePlugin
  * Based upon: http://html5boilerplate.com/
  *
