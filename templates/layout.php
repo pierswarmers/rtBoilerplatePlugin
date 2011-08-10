@@ -65,7 +65,7 @@ $snippet_area  = Doctrine_Inflector::urlize(sfInflector::tableize($module) . '-'
   <div id="rt-container">
 
     <div id="rt-header">
-        <?php echo link_to(sfConfig::get('app_rt_title', ''), 'homepage') ?>
+        <?php echo link_to(sfConfig::get('app_rt_title', ''), 'homepage', array(), array('class' => 'logo')) ?>
         <!------ Search form -->
         <div class="rt-section rt-core-search-widget">
           <div class="rt-section-content">
