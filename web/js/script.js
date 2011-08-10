@@ -12,7 +12,20 @@ $(function(){
     Section: Your code goes here...
   */
 
+    //
+    $(window).resize(function() {
 
+        var holder = $("#rtProductHolder");
+
+        if($(this).width() <= 520 && !holder.hasClass('microOptimised')) {
+            $('.rt-shop-product-gallery').prependTo($("#rtProductHolder"));
+            holder.addClass('microOptimised').removeClass('macroOptimised');
+        }
+        if($(this).width() > 520 && !holder.hasClass('macroOptimised')) {
+            $('.rt-shop-product-gallery').appendTo($("#rtProductHolder"));
+            holder.addClass('macroOptimised').removeClass('microOptimised');
+        }
+    });
 
     /*
     * Skeleton V1.0.3
