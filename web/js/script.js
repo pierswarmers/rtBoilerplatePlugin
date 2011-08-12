@@ -54,13 +54,15 @@ $(function() {
     rtAttributesValid();
 
     // Activate attribute selection buttons
-    $(".rt-shop-option-set").buttonset().find(':radio').click(function(e) {
-        $(".rt-shop-product-primary-image a[class*=rt-image-ref-" + $(this).attr("title").toLowerCase().replace(/[^a-zA-Z0-9]/g, "") + "]").css("display","inline").siblings('a').css("display","none");
-        $(".rt-shop-option-set input[type=radio]").each(function() { $(this).button( "widget" ).fadeTo(1, 0.4).removeClass('available'); });
-        $($(this).next('.ref').html()).each(function() { if(!$(this).hasClass('unavailable')) { $(this).button( "widget" ).fadeTo(1, 1).addClass('available'); } });
-        rtAttributesValid();
-    }).each(function() {
-        if($(this).button( "widget" ).hasClass('unavailable')) { $(this).button('disable', true).button( "widget" ).fadeTo(1, 0.4); }
+    $(".rt-shop-option-set").each(function(){
+        $(this).buttonset().find(':radio').click(function(e) {
+            $(".rt-shop-product-primary-image a[class*=rt-image-ref-" + $(this).attr("title").toLowerCase().replace(/[^a-zA-Z0-9]/g, "") + "]").css("display","inline").siblings('a').css("display","none");
+            $(".rt-shop-option-set input[type=radio]").each(function() { $(this).button( "widget" ).fadeTo(1, 0.4).removeClass('available'); });
+            $($(this).next('.ref').html()).each(function() { if(!$(this).hasClass('unavailable')) { $(this).button( "widget" ).fadeTo(1, 1).addClass('available'); } });
+            rtAttributesValid();
+        }).each(function() {
+            if($(this).button( "widget" ).hasClass('unavailable')) { $(this).button('disable', true).button( "widget" ).fadeTo(1, 0.4); }
+        });
     });
 
     // Re-enable the order form... see earlier in this script
