@@ -19,26 +19,27 @@ var rtOptiptimiseLayout = function() {
 
 /* Optiptimise screen layout
 ================================================== */
-var rtAttributesValid = function() {
-  var i = 0; var button = $('form.rt-shop-product-order-panel button');
+var rtAttributesValid = function(parentHolder) {
+  var i = 0; var button = parentHolder.find('button');
+
   $(".rt-shop-option-set").each(function(){ $(this).children('input:checked').each(function(){ i++; }); });
-  if(i == $("form.rt-shop-product-order-panel .rt-shop-option-set").size()) {
-    if(rtAttributesAllSelectedSelected()) {
-      button.text("Add to Cart").attr("disabled",false).removeClass("disabled").next('span').hide();
+    
+  if(i == parentHolder.find(".rt-shop-option-set").size()) {
+    if(rtAttributesAllSelectedSelected(parentHolder)) {
+      button.text("Add to Cart").attr("disabled", false).removeClass("disabled").next('span').hide();
     } else {
-      button.text("Not available").attr("disabled",true).addClass("disabled").next('span').show().addClass('error').html('That combination isn\'t in stock!');
+      button.text("Not available").attr("disabled", true).addClass("disabled").next('span').show().addClass('error').html('That combination isn\'t in stock!');
     }
   }
 }
 
 /* Are all options selected?
 ================================================== */
-var rtAttributesAllSelectedSelected = function() {
+var rtAttributesAllSelectedSelected = function(parentHolder) {
     var check = true;
-    $("form .rt-shop-option-set input:checked").each(function() { if(!$(this).button('widget').hasClass('available')) { check = false; } });
+    parentHolder.find(".rt-shop-option-set input:checked").each(function() { if(!$(this).button('widget').hasClass('available')) { check = false; } });
     return check;
 }
-
 
 /* On load...
 ================================================== */
@@ -51,15 +52,34 @@ $(function() {
     // rtOptiptimiseLayout on load
     rtOptiptimiseLayout();
 
-    rtAttributesValid();
+    $('form.rt-shop-product-order-panel').each(function(){ rtAttributesValid($(this)); });
+
+    $('form.rt-shop-product-order-panel').submit(function(e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: $(this).attr('action') + '.json',
+            dataType: 'json',
+            data: $(this).serialize(),
+            success: function(data)
+            {
+                $('form.rt-shop-product-order-panel .order-response').hide();
+                $('span.rt-shop-cart-items').html(data.cartItems);
+                $('span.rt-shop-cart-total').html(data.cartTotalFormatted);
+                $('form.rt-shop-product-order-panel').append('<p class="order-response '+ data.status +'">'+ data.message +'</p>');
+            }
+        }, "json");
+    });
 
     // Activate attribute selection buttons
     $(".rt-shop-option-set").each(function(){
         $(this).buttonset().find(':radio').click(function(e) {
             $(".rt-shop-product-primary-image a[class*=rt-image-ref-" + $(this).attr("title").toLowerCase().replace(/[^a-zA-Z0-9]/g, "") + "]").css("display","inline").siblings('a').css("display","none");
-            $(".rt-shop-option-set input[type=radio]").each(function() { $(this).button( "widget" ).fadeTo(1, 0.4).removeClass('available'); });
+            $(this).closest('form').find(".rt-shop-option-set input[type=radio]").each(function() { $(this).button( "widget" ).fadeTo(1, 0.4).removeClass('available'); });
             $($(this).next('.ref').html()).each(function() { if(!$(this).hasClass('unavailable')) { $(this).button( "widget" ).fadeTo(1, 1).addClass('available'); } });
-            rtAttributesValid();
+            rtAttributesValid($(this).closest('form'));
         }).each(function() {
             if($(this).button( "widget" ).hasClass('unavailable')) { $(this).button('disable', true).button( "widget" ).fadeTo(1, 0.4); }
         });
