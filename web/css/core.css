@@ -249,6 +249,7 @@
     #rt-side .rt-site-nav-dropdown, #rt-side .rt-site-nav-dropdown .rt-section-content { border:  0; padding: 0; }
     #rt-side .rt-site-nav-dropdown select { width: 100%; }
     .rt-site-nav-dropdown   .rt-section-header { display: none; }
+    #cboxLoadedContent img { width: auto; }
 
     
 
