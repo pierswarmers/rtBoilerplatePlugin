@@ -91,7 +91,7 @@ $(function() {
     // Handle clicks on the wishlist and the Ajax call to save the item.
     $(".rt-shop-add-to-wishlist a").click(function(e) {
         e.preventDefault(); $('.rt-shop-add-to-wishlist').addClass('loading').html('Adding to wishlist...');
-        $.ajax({ type: "POST", url: '/add-to-wishlist', data: ({ id : $('#rt-shop-product-id').attr('value') }), dataType: "xhr", success: function(data) { $('.rt-shop-add-to-wishlist').removeClass('loading').addClass('success'); $('.rt-shop-add-to-wishlist').html(data); } });
+        $.ajax({ type: "POST", url: '/add-to-wishlist', data: ({ id : $('#rt-shop-product-id').attr('value') }), dataType: "html", success: function(data) { $('.rt-shop-add-to-wishlist').removeClass('loading').addClass('success'); $('.rt-shop-add-to-wishlist').html(data); } });
       });
 
     /*
